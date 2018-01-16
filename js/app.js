@@ -34,7 +34,7 @@ function nameSearch() {
             person = person_object;
 			listOfCategory = {};
 			listOfCategory[person.id] = {};
-		} else if (person_object.person_name.indexOf(name_entered) != -1) {
+		} else if ((person_object.person_name.indexOf(name_entered) != -1) && (person == null)) {
 			person = person_object;
 			listOfCategory = {};
 			listOfCategory[person.id] = {};
