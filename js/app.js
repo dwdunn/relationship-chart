@@ -30,7 +30,11 @@ function nameSearch() {
 	var name_entered = $("#person_entry").val();
 	
 	$.each(listOfPerson, function (index, person_object) {
-		if (person_object.person_name.indexOf(name_entered) != -1) {
+		if (person_object.person_name == name_entered) {
+            person = person_object;
+			listOfCategory = {};
+			listOfCategory[person.id] = {};
+		} else if (person_object.person_name.indexOf(name_entered) != -1) {
 			person = person_object;
 			listOfCategory = {};
 			listOfCategory[person.id] = {};
