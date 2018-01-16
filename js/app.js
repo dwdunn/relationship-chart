@@ -125,6 +125,10 @@ $.each(listOfLocation, function( index, location_ie ) {
 // Pre-processing to make people easy to work with
 $.each(listOfPerson, function( index, person_object ) {
   people[person_object.id] = person_object;
+  
+  if(window.location.hash == '#' + person_object.person_name) {
+	  $('#person_entry').val(person_object.person_name);
+  }
 });
 	
 function relation() {
